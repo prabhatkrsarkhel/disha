@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PG LOCATOR MANAGEMENT</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="header_container">
+    <h1 >PG LOCATOR MANAGEMENT</h1>
+</div>
+<div class="body_container">
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+        <a class="navbar-brand" href="">PG LOCATOR MANAGEMENT</a>
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'home'%}">HOME</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbardrop0" data-toggle="dropdown">
+                USER
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'user_reg'%}">USER REGISTRATION</a>
+                <a class="dropdown-item" href="#">UPDATE DETAILS</a>
+                <a class="dropdown-item" href="#">DELETE DATA</a>
+              </div>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">
+                OWNER
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'owner_reg' %}">OWNER REGISTRATION</a>
+                <a class="dropdown-item" href="#">UPDATE DETAILS</a>
+                <a class="dropdown-item" href="#">DELETE DATA</a>
+              </div>
+            </li>
+              <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">
+                LOGIN
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="{% url 'login' %}">LOGIN AS USER</a>
+                <a class="dropdown-item" href="#">LOGIN AS OWNER</a>
+              </div>
+            </li>
+                 <li class="nav-item">
+              <a class="nav-link" href="#">LOGOUT</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link" href="#">SEARCH/BOOKING</a>
+            </li>
+          </ul>
+    </nav>
+     {% block nav_content %}
+     {% endblock nav_content %}
+    <div style="background-color:black;margin-top:5px;">
+        {%include 'footer.html'%}
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+{% extends 'index.html' %}
+<!--<!DOCTYPE html>
+<html>
+<title>USER REG</title>
+<head>
+{% load static %}
+<link rel="stylesheet" href="{% static '/login.css' %}">
+</head>
+<body>-->
+
+
+
+{% block nav_content %}
+<div class="heading">
+ <h2>LOGIN | SIGN IN</h2>
+</div>
+<div class="form">
+	<div class="sub-form">
+		<form action="logcheck" method="POST">
+		{% csrf_token %}
+		<div class="username">
+		<label for="fname" >User Name</label></div>
+		<input type="text" id="fname" name="name" placeholder="Enter your User name..">
+
+		<div class="password">
+		<label for="password">Password</label> </div>
+		<input type="password" id="password" name="password" placeholder="Enter your password..">
+
+
+		<input type="submit" value="SUBMIT">
+		</form>
+	</div>
+</div>
+{% endblock %}
+
+<!--</body>
+</html>-->
